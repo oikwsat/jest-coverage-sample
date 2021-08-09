@@ -1,7 +1,8 @@
 {
   "scripts": {
     "test": "jest",
-    "coverage": "jest --coverage"
+    "coverage": "jest --coverage",
+    "coverage:ci": "jest --coverage --silent --ci --testLocationInResults --json --outputFile=\"report.json\""
   },
   "devDependencies": {
     "jest": "^27.0.6"
