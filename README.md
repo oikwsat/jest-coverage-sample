@@ -2,16 +2,17 @@
 
 ## install
 
-```
-yarn
+```sh
+yarn install
 ```
 
 ## run test
 
 ```sh
 yarn test
+```
 
-$ jest
+```sh
  PASS  ./sum.test.js
   ✓ adds 1 + 2 to equal 3 (2 ms)
 
@@ -27,8 +28,9 @@ Ran all test suites.
 
 ```sh
 yarn coverage
+```
 
-$ jest --coverage
+```sh
  PASS  ./sum.test.js
   ✓ adds 1 + 2 to equal 3 (2 ms)
 
