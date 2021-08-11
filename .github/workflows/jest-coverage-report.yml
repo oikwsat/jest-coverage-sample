@@ -11,14 +11,14 @@ jobs:
       - name: "Checkout projects"
         uses: actions/checkout@v2
       - uses: marceloprado/has-changed-path@v1
-        id: changed-wildcard
+        id: changed-js
         with:
-          paths: **
+          paths: **/*.js
       - name: "Install packages"
-        if: steps.changed-wildcard.outputs.changed == 'true'
+        if: steps.changed-js.outputs.changed == 'true'
         run: yarn install
       - name: Jest coverage report
-        if: steps.changed-wildcard.outputs.changed == 'true'
+        if: steps.changed-js.outputs.changed == 'true'
         uses: artiomtr/jest-coverage-report-action@v2.0-rc.3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
