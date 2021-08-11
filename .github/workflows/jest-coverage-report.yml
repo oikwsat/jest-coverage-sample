@@ -13,7 +13,7 @@ jobs:
       - uses: marceloprado/has-changed-path@v1
         id: changed-js
         with:
-          paths: **/*.js
+          paths: "**/*.js"
       - name: "Install packages"
         if: steps.changed-js.outputs.changed == 'true'
         run: yarn install
